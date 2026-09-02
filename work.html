@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Work — Jordan Reyes</title>
+<meta name="description" content="Motion design and animation projects across 2D, 3D, brand identity, UI motion, VFX, and title sequences." />
+<meta property="og:title" content="Work — Jordan Reyes, Motion Designer" />
+<meta property="og:description" content="Browse the full reel archive, filterable by discipline." />
+<meta property="og:type" content="website" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <a href="index.html" class="brand"><span class="rec-dot" aria-hidden="true"></span>Jordan Reyes</a>
+  <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+  <nav class="main-nav" aria-label="Primary">
+    <a href="index.html">Home</a>
+    <a href="work.html" class="is-active">Work</a>
+    <a href="about.html">About</a>
+    <a href="contact.html" class="nav-cta">Contact</a>
+  </nav>
+</header>
+
+<main id="main">
+  <section class="section container" style="padding-bottom:0;">
+    <span class="eyebrow-mono">Archive</span>
+    <h1 class="display-lg" style="margin-top:12px;">All work</h1>
+  </section>
+
+  <section class="section container">
+    <div class="filter-bar" id="filter-bar" role="group" aria-label="Filter by category"></div>
+    <p class="results-count" id="results-count" aria-live="polite"></p>
+    <div class="grid" id="work-grid"></div>
+    <p id="empty-state" style="display:none; margin-top:24px;">No projects match this filter yet — check back soon, or <a href="contact.html" style="text-decoration:underline;">get in touch</a> about a brief like this.</p>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <span>© <span id="year"></span> Jordan Reyes. Built to move.</span>
+  <div class="footer-links">
+    <a href="mailto:hello@jordanreyes.work">Email</a>
+    <a href="https://linkedin.com" target="_blank" rel="noopener">LinkedIn</a>
+    <a href="https://vimeo.com" target="_blank" rel="noopener">Vimeo</a>
+  </div>
+</footer>
+
+<script src="js/data.js"></script>
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+
+  const PLAY_ICON = '<svg viewBox="0 0 24 24"><polygon points="6,4 20,12 6,20"/></svg>';
+
+  const params = new URLSearchParams(location.search);
+  let activeFilter = params.get("cat") || "all";
+
+  const filterBar = document.getElementById("filter-bar");
+  const gridEl = document.getElementById("work-grid");
+  const countEl = document.getElementById("results-count");
+  const emptyEl = document.getElementById("empty-state");
+
+  function renderFilters() {
+    const chips = [{ id: "all", label: "All work" }, ...CATEGORIES];
+    filterBar.innerHTML = chips
+      .map(
+        (c) =>
+          `<button class="filter-chip${c.id === activeFilter ? " is-active" : ""}" data-filter="${c.id}" data-cursor-hover>${c.label}</button>`
+      )
+      .join("");
+    filterBar.querySelectorAll(".filter-chip").forEach((btn) => {
+      btn.addEventListener("click", () => {
+        activeFilter = btn.getAttribute("data-filter");
+        const url = new URL(location.href);
+        activeFilter === "all" ? url.searchParams.delete("cat") : url.searchParams.set("cat", activeFilter);
+        history.replaceState(null, "", url);
+        renderFilters();
+        renderGrid();
+      });
+    });
+  }
+
+  function renderGrid() {
+    const filtered = PROJECTS.filter(
+      (p) => activeFilter === "all" || p.categories.includes(activeFilter)
+    ).sort((a, b) => b.year - a.year);
+
+    countEl.textContent = `${filtered.length} project${filtered.length === 1 ? "" : "s"}`;
+    emptyEl.style.display = filtered.length ? "none" : "block";
+
+    gridEl.innerHTML = filtered
+      .map((p) => {
+        const catLabels = p.categories
+          .map((c) => (CATEGORIES.find((x) => x.id === c) || {}).label || c)
+          .join(" · ");
+        return `
+        <article class="card reveal is-visible">
+          <a class="card-link" href="project.html?p=${p.slug}" data-cursor-hover>
+            <div class="card-media">
+              <video muted loop playsinline preload="none" data-src="${p.video.src}"
+                onmouseenter="this.src||(this.src=this.dataset.src);this.play&&this.play().catch(()=>{})"
+                onmouseleave="this.pause&&this.pause()"
+              ></video>
+              <div class="card-play"><div class="card-play-ring">${PLAY_ICON}</div></div>
+            </div>
+            <div class="card-meta">
+              <span class="card-title">${p.title}</span>
+              <span class="card-sub tc">${p.client} — ${p.year}</span>
+            </div>
+            <div class="card-cats">${catLabels}</div>
+          </a>
+        </article>`;
+      })
+      .join("");
+  }
+
+  renderFilters();
+  renderGrid();
+</script>
+<script src="js/main.js"></script>
+</body>
+</html>

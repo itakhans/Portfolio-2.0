@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>About — Jordan Reyes</title>
+<meta name="description" content="Jordan Reyes is a Los Angeles-based motion designer with a background in editorial design and eight years across agency and in-house animation work." />
+<meta property="og:title" content="About — Jordan Reyes, Motion Designer" />
+<meta property="og:type" content="website" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <a href="index.html" class="brand"><span class="rec-dot" aria-hidden="true"></span>Jordan Reyes</a>
+  <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+  <nav class="main-nav" aria-label="Primary">
+    <a href="index.html">Home</a>
+    <a href="work.html">Work</a>
+    <a href="about.html" class="is-active">About</a>
+    <a href="contact.html" class="nav-cta">Contact</a>
+  </nav>
+</header>
+
+<main id="main">
+  <section class="section container">
+    <div class="about-grid">
+      <div class="headshot reveal">
+        <!-- Replace with your own photo at assets/headshot.jpg -->
+        <img src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?w=800&q=80" alt="Portrait of Jordan Reyes at their desk" />
+      </div>
+
+      <div>
+        <span class="eyebrow-mono reveal">About</span>
+        <h1 class="display-lg reveal" style="margin-top:12px;">Hi, I'm Jordan.<br />I make things move for a living.</h1>
+
+        <p class="lede reveal" style="margin-top:24px; max-width:58ch;">
+          I'm a motion designer and animator based in Los Angeles, working
+          across 2D animation, CGI, brand identity, UI motion, and VFX.
+          Over the past eight years I've split my time between agency work
+          and in-house teams, which means I'm equally comfortable pitching
+          a concept from a blank page and slotting into an existing design
+          system on day one.
+        </p>
+        <p class="reveal" style="margin-top:16px; max-width:58ch;">
+          I trained originally as an editorial illustrator, which still
+          shows up in how I think about pacing and composition — every
+          project starts as a storyboard before it becomes a timeline.
+          I care most about work that respects the viewer's attention:
+          nothing moves without a reason.
+        </p>
+        <a href="assets/jordan-reyes-resume.pdf" class="btn btn-outline reveal" style="margin-top:24px;" data-cursor-hover>
+          Download résumé (PDF)
+        </a>
+
+        <div class="reveal" style="margin-top:64px;">
+          <span class="eyebrow-mono">Software</span>
+          <div class="skills-grid">
+            <div class="skill-item"><span>After Effects</span></div>
+            <div class="skill-item"><span>Cinema 4D</span></div>
+            <div class="skill-item"><span>Blender</span></div>
+            <div class="skill-item"><span>Figma</span></div>
+            <div class="skill-item"><span>Houdini</span></div>
+            <div class="skill-item"><span>Nuke</span></div>
+            <div class="skill-item"><span>Premiere Pro</span></div>
+            <div class="skill-item"><span>Illustrator</span></div>
+          </div>
+        </div>
+
+        <div class="reveal" style="margin-top:56px;">
+          <span class="eyebrow-mono">Career</span>
+          <div class="timeline">
+            <div class="timeline-item">
+              <span class="timeline-year tc">2023—</span>
+              <div>
+                <div class="timeline-role">Senior Motion Designer</div>
+                <div class="timeline-org">Freelance / Independent</div>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <span class="timeline-year tc">2020—23</span>
+              <div>
+                <div class="timeline-role">Motion Designer</div>
+                <div class="timeline-org">Northline Pictures</div>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <span class="timeline-year tc">2018—20</span>
+              <div>
+                <div class="timeline-role">Junior Animator</div>
+                <div class="timeline-org">Firebrand Studios</div>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <span class="timeline-year tc">2016—18</span>
+              <div>
+                <div class="timeline-role">Editorial Illustrator</div>
+                <div class="timeline-org">Freelance</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <span>© <span id="year"></span> Jordan Reyes. Built to move.</span>
+  <div class="footer-links">
+    <a href="mailto:hello@jordanreyes.work">Email</a>
+    <a href="https://linkedin.com" target="_blank" rel="noopener">LinkedIn</a>
+    <a href="https://vimeo.com" target="_blank" rel="noopener">Vimeo</a>
+  </div>
+</footer>
+
+<script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+<script src="js/main.js"></script>
+</body>
+</html>

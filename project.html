@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title id="doc-title">Project — Jordan Reyes</title>
+<meta id="meta-description" name="description" content="" />
+<meta id="og-title" property="og:title" content="" />
+<meta id="og-description" property="og:description" content="" />
+<meta property="og:type" content="video.other" />
+<meta id="og-image" property="og:image" content="" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <a href="index.html" class="brand"><span class="rec-dot" aria-hidden="true"></span>Jordan Reyes</a>
+  <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+  <nav class="main-nav" aria-label="Primary">
+    <a href="index.html">Home</a>
+    <a href="work.html" class="is-active">Work</a>
+    <a href="about.html">About</a>
+    <a href="contact.html" class="nav-cta">Contact</a>
+  </nav>
+</header>
+
+<main id="main">
+  <!-- Everything below is populated by js/project.js from data.js -->
+  <section class="project-hero container">
+    <a href="work.html" class="eyebrow-mono" style="text-decoration:underline;">← Back to work</a>
+    <div class="project-hero-grid" style="margin-top:24px;">
+      <div>
+        <h1 class="display-lg" id="p-title">—</h1>
+        <p class="lede" id="p-blurb" style="margin-top:14px;"></p>
+      </div>
+      <dl class="project-facts">
+        <div><dt>Client</dt><dd id="p-client">—</dd></div>
+        <div><dt>Year</dt><dd id="p-year">—</dd></div>
+        <div><dt>Role</dt><dd id="p-role">—</dd></div>
+        <div><dt>Category</dt><dd id="p-cats">—</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <section class="container">
+    <div class="player-wrap" data-player>
+      <video id="main-video" muted loop playsinline preload="none" aria-label="Project reel"></video>
+      <div class="player-controls">
+        <button class="player-btn" data-play aria-label="Play"></button>
+        <button class="player-btn" data-mute aria-label="Mute"></button>
+        <div class="player-scrub" data-scrub role="slider" aria-label="Seek" tabindex="0">
+          <div class="player-scrub-fill" data-scrub-fill></div>
+        </div>
+        <span class="player-time tc" data-time>00:00 / 00:00</span>
+        <button class="btn btn-outline cinema-btn" data-cinema-open="#main-video" data-cursor-hover>
+          Cinema mode
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <section class="container project-body">
+    <div>
+      <span class="eyebrow-mono">Process</span>
+      <p class="lede" id="p-description" style="margin-top:14px; max-width:60ch;"></p>
+
+      <div id="breakdown-block" style="display:none; margin-top:56px;">
+        <span class="eyebrow-mono">Before / after — breakdown</span>
+        <div class="player-wrap" data-player style="margin-top:20px;">
+          <video id="breakdown-video" muted loop playsinline preload="none"></video>
+          <div class="player-controls">
+            <button class="player-btn" data-play aria-label="Play"></button>
+            <button class="player-btn" data-mute aria-label="Mute"></button>
+            <div class="player-scrub" data-scrub role="slider" aria-label="Seek" tabindex="0">
+              <div class="player-scrub-fill" data-scrub-fill></div>
+            </div>
+            <span class="player-time tc" data-time>00:00 / 00:00</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <aside>
+      <div class="sidebar-block">
+        <span class="sidebar-label">Credits</span>
+        <ul class="credit-list" id="p-credits"></ul>
+      </div>
+      <div class="sidebar-block">
+        <span class="sidebar-label">Tools</span>
+        <div class="tool-tags" id="p-tools"></div>
+      </div>
+    </aside>
+  </section>
+
+  <section class="container next-project">
+    <a class="next-project-link" id="next-project-link" href="work.html" data-cursor-hover>
+      <div>
+        <span class="eyebrow-mono">Next project</span>
+        <h3 class="display-lg" id="next-project-title" style="margin-top:8px;">—</h3>
+      </div>
+      <span class="tc" style="font-size:2rem;">→</span>
+    </a>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <span>© <span id="year"></span> Jordan Reyes. Built to move.</span>
+  <div class="footer-links">
+    <a href="mailto:hello@jordanreyes.work">Email</a>
+    <a href="https://linkedin.com" target="_blank" rel="noopener">LinkedIn</a>
+    <a href="https://vimeo.com" target="_blank" rel="noopener">Vimeo</a>
+  </div>
+</footer>
+
+<div class="cinema-overlay" aria-hidden="true">
+  <button class="cinema-close" data-cinema-close aria-label="Close cinema mode">✕</button>
+  <video controls playsinline></video>
+</div>
+
+<script src="js/data.js"></script>
+<script src="js/project.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
