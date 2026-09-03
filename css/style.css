@@ -183,13 +183,14 @@ p { color: var(--text-dim); max-width: 62ch; }
   height: 1px;
   background: var(--accent);
 }
-.nav-cta {
+.main-nav .nav-cta {
+  display: inline-block;
   border: 1px solid var(--line-strong);
   padding: 8px 16px;
   border-radius: 100px;
   transition: border-color 0.2s var(--ease), background 0.2s var(--ease);
 }
-.nav-cta:hover { border-color: var(--accent); background: rgba(232,64,42,0.08); }
+.main-nav .nav-cta:hover { border-color: var(--accent); background: rgba(232,64,42,0.08); }
 
 .nav-toggle {
   display: none;
@@ -296,7 +297,7 @@ p { color: var(--text-dim); max-width: 62ch; }
 
 .scroll-cue {
   position: absolute;
-  bottom: 28px; right: var(--gutter);
+  bottom: 28px; left: var(--gutter);
   z-index: 2;
   font-family: var(--font-mono);
   font-size: 0.75rem;
@@ -799,7 +800,7 @@ p { color: var(--text-dim); max-width: 62ch; }
   .credit-list li { flex-direction: column; gap: 2px; }
   .next-project-link { align-items: flex-start; flex-direction: column; gap: 12px; }
 
-  .nav-cta { padding: 8px 14px; }
+  .main-nav .nav-cta { padding: 8px 14px; }
 }
 
 /* Tablet / mid-width: two columns still fit for the capability

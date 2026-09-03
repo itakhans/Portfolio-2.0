@@ -106,6 +106,11 @@
   }
 
   /* ---------- Generic custom player controls ---------- */
+  const ICON_PLAY = '<svg viewBox="0 0 24 24"><polygon points="6,4 20,12 6,20"/></svg>';
+  const ICON_PAUSE = '<svg viewBox="0 0 24 24"><rect x="5" y="4" width="5" height="16"/><rect x="14" y="4" width="5" height="16"/></svg>';
+  const ICON_MUTED = '<svg viewBox="0 0 24 24"><path d="M4 9v6h4l5 5V4L8 9H4zm12.5 3l3-3-1-1-3 3-3-3-1 1 3 3-3 3 1 1 3-3 3 3 1-1-3-3z"/></svg>';
+  const ICON_UNMUTED = '<svg viewBox="0 0 24 24"><path d="M4 9v6h4l5 5V4L8 9H4zm11.5 3a4.5 4.5 0 0 0-2.5-4v8a4.5 4.5 0 0 0 2.5-4zM13 1.5v2.06c3.4.9 6 3.98 6 7.44s-2.6 6.55-6 7.44v2.06c4.5-.93 8-4.92 8-9.5s-3.5-8.57-8-9.5z"/></svg>';
+
   document.querySelectorAll("[data-player]").forEach((wrap) => {
     const video = wrap.querySelector("video");
     const playBtn = wrap.querySelector("[data-play]");
@@ -162,11 +167,6 @@
       });
     }
   });
-
-  const ICON_PLAY = '<svg viewBox="0 0 24 24"><polygon points="6,4 20,12 6,20"/></svg>';
-  const ICON_PAUSE = '<svg viewBox="0 0 24 24"><rect x="5" y="4" width="5" height="16"/><rect x="14" y="4" width="5" height="16"/></svg>';
-  const ICON_MUTED = '<svg viewBox="0 0 24 24"><path d="M4 9v6h4l5 5V4L8 9H4zm12.5 3l3-3-1-1-3 3-3-3-1 1 3 3-3 3 1 1 3-3 3 3 1-1-3-3z"/></svg>';
-  const ICON_UNMUTED = '<svg viewBox="0 0 24 24"><path d="M4 9v6h4l5 5V4L8 9H4zm11.5 3a4.5 4.5 0 0 0-2.5-4v8a4.5 4.5 0 0 0 2.5-4zM13 1.5v2.06c3.4.9 6 3.98 6 7.44s-2.6 6.55-6 7.44v2.06c4.5-.93 8-4.92 8-9.5s-3.5-8.57-8-9.5z"/></svg>';
 
   /* ---------- Cinema mode ---------- */
   document.querySelectorAll("[data-cinema-open]").forEach((btn) => {
