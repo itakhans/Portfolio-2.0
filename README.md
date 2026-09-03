@@ -63,7 +63,7 @@ Everything is placeholder and safe to replace:
 - **Headshot** on the About page is a stock placeholder — replace the
   `src` in `about.html` with your own photo (suggest saving it to
   `assets/headshot.jpg` and pointing there).
-- **Résumé** link points to `assets/jordan-reyes-resume.pdf` — add your
+- **Résumé** link points to `assets/Darhan-reyes-resume.pdf` — add your
   actual PDF at that path.
 - **Social links, email address, name/branding** — find-and-replace
   "Darhan Sartai" and the social URLs across the five HTML files.
