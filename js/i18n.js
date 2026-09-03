@@ -98,7 +98,7 @@ const UI = {
     about_eyebrow: "About",
     about_headline_html: "Hi, I'm Darhan.<br />I make things move for a living.",
     about_p1:
-      "I'm a motion designer and animator based in Los Angeles, working across 2D animation, CGI, brand identity, UI motion, and VFX. Over the past eight years I've split my time between agency work and in-house teams, which means I'm equally comfortable pitching a concept from a blank page and slotting into an existing design system on day one.",
+      "I'm a motion designer and animator based in Astana, working across 2D animation, CGI, brand identity, UI motion, and VFX. Over the past eight years I've split my time between agency work and in-house teams, which means I'm equally comfortable pitching a concept from a blank page and slotting into an existing design system on day one.",
     about_p2:
       "I trained originally as an editorial illustrator, which still shows up in how I think about pacing and composition — every project starts as a storyboard before it becomes a timeline. I care most about work that respects the viewer's attention: nothing moves without a reason.",
     about_resume: "Download résumé (PDF)",
@@ -126,7 +126,7 @@ const UI = {
     contact_elsewhere: "Elsewhere",
     contact_resume_link: "Résumé (PDF)",
     contact_location_note:
-      "Based in Los Angeles, CA — working with clients everywhere. Typical reply time is 1–2 business days.",
+      "Based in Astana, Kazakhstan — working with clients everywhere. Typical reply time is 1–2 business days.",
     contact_status_fix: "Please fix the highlighted fields.",
     contact_status_sending: "Sending…",
     contact_status_success: "Thanks — message sent. I'll reply within a couple of days.",
@@ -203,7 +203,7 @@ UI.ru.player_unmute_aria = "Включить звук";
 UI.ru.about_eyebrow = "Обо мне";
 UI.ru.about_headline_html = "Привет, я Дархан.<br />Заставляю вещи двигаться — это моя работа.";
 UI.ru.about_p1 =
-  "Я моушн-дизайнер и аниматор из Лос-Анджелеса, работаю с 2D-анимацией, CGI, айдентикой брендов, UI-анимацией и визуальными эффектами. За последние восемь лет я работал как в агентствах, так и в штате компаний, поэтому одинаково уверенно чувствую себя и при разработке концепции с нуля, и при встраивании в уже существующую дизайн-систему.";
+  "Я моушн-дизайнер и аниматор из Астаны, работаю с 2D-анимацией, CGI, айдентикой брендов, UI-анимацией и визуальными эффектами. За последние восемь лет я работал как в агентствах, так и в штате компаний, поэтому одинаково уверенно чувствую себя и при разработке концепции с нуля, и при встраивании в уже существующую дизайн-систему.";
 UI.ru.about_p2 =
   "Изначально я учился на редакционного иллюстратора, и это до сих пор влияет на то, как я мыслю темпом и композицией — каждый проект начинается со сториборда, прежде чем стать таймлайном. Больше всего для меня важна работа, которая уважает внимание зрителя: ничто не движется без причины.";
 UI.ru.about_resume = "Скачать резюме (PDF)";
@@ -230,7 +230,7 @@ UI.ru.contact_send = "Отправить";
 UI.ru.contact_elsewhere = "Другие каналы";
 UI.ru.contact_resume_link = "Резюме (PDF)";
 UI.ru.contact_location_note =
-  "Нахожусь в Лос-Анджелесе, Калифорния — работаю с клиентами по всему миру. Обычно отвечаю в течение 1–2 рабочих дней.";
+  "Нахожусь в Казахстане, в городе Астана — работаю с клиентами по всему миру. Обычно отвечаю в течение 1–2 рабочих дней.";
 UI.ru.contact_status_fix = "Пожалуйста, исправьте выделенные поля.";
 UI.ru.contact_status_sending = "Отправка…";
 UI.ru.contact_status_success = "Спасибо — сообщение отправлено. Отвечу в течение пары дней.";
@@ -303,7 +303,7 @@ UI.kk = {
   about_eyebrow: "Мен туралы",
   about_headline_html: "Сәлем, мен Дарханмын.<br />Заттарды қозғалысқа келтіру — менің кәсібім.",
   about_p1:
-    "Мен Лос-Анджелесте тұратын моушн-дизайнер және аниматормын, 2D анимация, CGI, брендтердің айдентикасы, UI қозғалысы және VFX бағыттарында жұмыс істеймін. Соңғы сегіз жылда агенттіктерде де, компания құрамында да жұмыс істедім, сондықтан концепцияны бастан жасауда да, дайын дизайн-жүйеге қосылуда да бірдей еркінмін.",
+    "Мен Астанада тұратын моушн-дизайнер және аниматормын, 2D анимация, CGI, брендтердің айдентикасы, UI қозғалысы және VFX бағыттарында жұмыс істеймін. Соңғы сегіз жылда агенттіктерде де, компания құрамында да жұмыс істедім, сондықтан концепцияны бастан жасауда да, дайын дизайн-жүйеге қосылуда да бірдей еркінмін.",
   about_p2:
     "Бастапқыда редакциялық иллюстратор болып оқыдым, бұл әлі күнге дейін менің қарқын мен композицияны қалай ойлайтыныма әсер етеді — әрбір жоба таймлайнға айналмас бұрын раскадровкадан басталады. Мен үшін ең маңыздысы — көрермен назарын құрметтейтін жұмыс: ешнәрсе себепсіз қозғалмайды.",
   about_resume: "Резюмені жүктеу (PDF)",
@@ -330,7 +330,7 @@ UI.kk = {
   contact_elsewhere: "Басқа арналар",
   contact_resume_link: "Резюме (PDF)",
   contact_location_note:
-    "Лос-Анджелесте, Калифорнияда тұрамын — әлемнің кез келген жеріндегі клиенттермен жұмыс істеймін. Әдетте 1–2 жұмыс күні ішінде жауап беремін.",
+    "Қазақстанда, Астана қаласында тұрамын — әлемнің кез келген жеріндегі клиенттермен жұмыс істеймін. Әдетте 1–2 жұмыс күні ішінде жауап беремін.",
   contact_status_fix: "Белгіленген өрістерді түзетіңіз.",
   contact_status_sending: "Жіберілуде…",
   contact_status_success: "Рахмет — хабарлама жіберілді. Бір-екі күн ішінде жауап беремін.",
