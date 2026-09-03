@@ -19,14 +19,14 @@
     .map((c) => (CATEGORIES.find((x) => x.id === c) || {}).label || c)
     .join(" · ");
 
-  document.title = `${project.title} — Jordan Reyes`;
+  document.title = `${project.title} — Darhan Sartai`;
   const setText = (id, val) => {
     const el = document.getElementById(id);
     if (el) el.textContent = val;
   };
-  setText("doc-title", `${project.title} — Jordan Reyes`);
+  setText("doc-title", `${project.title} — Darhan Sartai`);
   document.getElementById("meta-description").setAttribute("content", project.blurb);
-  document.getElementById("og-title").setAttribute("content", `${project.title} — Jordan Reyes, Motion Designer`);
+  document.getElementById("og-title").setAttribute("content", `${project.title} — Darhan Sartai, Motion Designer`);
   document.getElementById("og-description").setAttribute("content", project.blurb);
   if (project.video.poster) {
     document.getElementById("og-image").setAttribute("content", project.video.poster);

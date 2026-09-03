@@ -51,7 +51,7 @@ const PROJECTS = [
     ],
     video: {
       type: "mp4",
-      src: "https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4",
+      src: "https://79f21e0b.rubik-5c7.pages.dev/Rubik_s_Cube_Loop.mp4",
       poster: "",
     },
     breakdown: null,
@@ -74,7 +74,7 @@ const PROJECTS = [
     ],
     video: {
       type: "mp4",
-      src: "https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4",
+      src: "https://79f21e0b.rubik-5c7.pages.dev/Rubik_s_Cube_Loop.mp4",
       poster: "",
     },
     breakdown: null,
@@ -97,7 +97,7 @@ const PROJECTS = [
     ],
     video: {
       type: "mp4",
-      src: "https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4",
+      src: "https://79f21e0b.rubik-5c7.pages.dev/Rubik_s_Cube_Loop.mp4",
       poster: "",
     },
     breakdown: null,
@@ -121,12 +121,12 @@ const PROJECTS = [
     ],
     video: {
       type: "mp4",
-      src: "https://storage.googleapis.com/gtv-videos-bucket/sample/Sintel.mp4",
+      src: "https://79f21e0b.rubik-5c7.pages.dev/Rubik_s_Cube_Loop.mp4",
       poster: "",
     },
     breakdown: {
       type: "mp4",
-      src: "https://storage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4",
+      src: "https://79f21e0b.rubik-5c7.pages.dev/Rubik_s_Cube_Loop.mp4",
       poster: "",
     },
     featured: true,
@@ -148,7 +148,7 @@ const PROJECTS = [
     ],
     video: {
       type: "mp4",
-      src: "https://storage.googleapis.com/gtv-videos-bucket/sample/TearsOfSteel.mp4",
+      src: "https://79f21e0b.rubik-5c7.pages.dev/Rubik_s_Cube_Loop.mp4",
       poster: "",
     },
     breakdown: null,
@@ -168,7 +168,7 @@ const PROJECTS = [
     credits: [{ role: "Motion Design", name: "You" }],
     video: {
       type: "mp4",
-      src: "https://storage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
+      src: "https://79f21e0b.rubik-5c7.pages.dev/Rubik_s_Cube_Loop.mp4",
       poster: "",
     },
     breakdown: null,

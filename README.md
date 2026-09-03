@@ -1,4 +1,4 @@
-# Jordan Reyes — Motion Designer Portfolio
+# Darhan Sartai — Motion Designer Portfolio
 
 A dependency-free HTML/CSS/JS portfolio site. No build step, no framework —
 open `index.html` in a browser and it works. Deploy it anywhere that serves
@@ -66,7 +66,7 @@ Everything is placeholder and safe to replace:
 - **Résumé** link points to `assets/jordan-reyes-resume.pdf` — add your
   actual PDF at that path.
 - **Social links, email address, name/branding** — find-and-replace
-  "Jordan Reyes" and the social URLs across the five HTML files.
+  "Darhan Sartai" and the social URLs across the five HTML files.
 - **OG cover image** — add `assets/og-cover.jpg` (1200×630px) for link
   previews on social/Slack shares.
 
