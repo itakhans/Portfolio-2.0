@@ -1,0 +1,21 @@
+# Normalize line endings for this repo: always LF, regardless of OS.
+* text=auto eol=lf
+
+# Explicit, in case a tool/editor tries to override the above per-type:
+*.html text eol=lf
+*.css  text eol=lf
+*.js   text eol=lf
+*.md   text eol=lf
+*.json text eol=lf
+
+# Binary files — never touch line endings in these:
+*.png  binary
+*.jpg  binary
+*.jpeg binary
+*.gif  binary
+*.svg  binary
+*.pdf  binary
+*.mp4  binary
+*.mov  binary
+*.woff binary
+*.woff2 binary
