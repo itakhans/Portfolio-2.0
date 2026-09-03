@@ -15,42 +15,47 @@
 <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-<a class="skip-link" href="#main">Skip to content</a>
+<a class="skip-link" href="#main" data-i18n="skip_link">Skip to content</a>
 
 <header class="site-header">
-  <a href="index.html" class="brand"><span class="rec-dot" aria-hidden="true"></span>Darhan Sartai</a>
-  <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+  <a href="index.html" class="brand"><span class="rec-dot" aria-hidden="true"></span><span data-i18n="brand_name">Darhan Sartai</span></a>
+  <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" data-i18n-aria="nav_toggle_aria">
     <span></span><span></span><span></span>
   </button>
   <nav class="main-nav" aria-label="Primary">
-    <a href="index.html">Home</a>
-    <a href="work.html" class="is-active">Work</a>
-    <a href="about.html">About</a>
-    <a href="contact.html" class="nav-cta">Contact</a>
+    <a href="index.html" data-i18n="nav_home">Home</a>
+    <a href="work.html" class="is-active" data-i18n="nav_work">Work</a>
+    <a href="about.html" data-i18n="nav_about">About</a>
+    <a href="contact.html" class="nav-cta" data-i18n="nav_contact">Contact</a>
+    <div class="lang-switch" role="group" data-i18n-aria="lang_switch_aria" aria-label="Language">
+      <button type="button" data-lang="en">EN</button>
+      <button type="button" data-lang="kk">KK</button>
+      <button type="button" data-lang="ru">RU</button>
+    </div>
   </nav>
 </header>
 
 <main id="main">
   <!-- Everything below is populated by js/project.js from data.js -->
   <section class="project-hero container">
-    <a href="work.html" class="eyebrow-mono" style="text-decoration:underline;">← Back to work</a>
+    <a href="work.html" class="eyebrow-mono" style="text-decoration:underline;" data-i18n="proj_back">← Back to work</a>
     <div class="project-hero-grid" style="margin-top:24px;">
       <div>
         <h1 class="display-lg" id="p-title">—</h1>
         <p class="lede" id="p-blurb" style="margin-top:14px;"></p>
       </div>
       <dl class="project-facts">
-        <div><dt>Client</dt><dd id="p-client">—</dd></div>
-        <div><dt>Year</dt><dd id="p-year">—</dd></div>
-        <div><dt>Role</dt><dd id="p-role">—</dd></div>
-        <div><dt>Category</dt><dd id="p-cats">—</dd></div>
+        <div><dt data-i18n="proj_client">Client</dt><dd id="p-client">—</dd></div>
+        <div><dt data-i18n="proj_year">Year</dt><dd id="p-year">—</dd></div>
+        <div><dt data-i18n="proj_role">Role</dt><dd id="p-role">—</dd></div>
+        <div><dt data-i18n="proj_category">Category</dt><dd id="p-cats">—</dd></div>
       </dl>
     </div>
   </section>
 
   <section class="container">
     <div class="player-wrap" data-player>
-      <video id="main-video" muted loop playsinline preload="none" aria-label="Project reel"></video>
+      <video id="main-video" muted loop playsinline preload="none" aria-label="Project reel" data-i18n-aria="proj_reel_aria"></video>
       <div class="player-controls">
         <button class="player-btn" data-play aria-label="Play"></button>
         <button class="player-btn" data-mute aria-label="Mute"></button>
@@ -58,7 +63,7 @@
           <div class="player-scrub-fill" data-scrub-fill></div>
         </div>
         <span class="player-time tc" data-time>00:00 / 00:00</span>
-        <button class="btn btn-outline cinema-btn" data-cinema-open="#main-video" data-cursor-hover>
+        <button class="btn btn-outline cinema-btn" data-cinema-open="#main-video" data-cursor-hover data-i18n="proj_cinema">
           Cinema mode
         </button>
       </div>
@@ -67,11 +72,11 @@
 
   <section class="container project-body">
     <div>
-      <span class="eyebrow-mono">Process</span>
+      <span class="eyebrow-mono" data-i18n="proj_process">Process</span>
       <p class="lede" id="p-description" style="margin-top:14px; max-width:60ch;"></p>
 
       <div id="breakdown-block" style="display:none; margin-top:56px;">
-        <span class="eyebrow-mono">Before / after — breakdown</span>
+        <span class="eyebrow-mono" data-i18n="proj_breakdown_eyebrow">Before / after — breakdown</span>
         <div class="player-wrap" data-player style="margin-top:20px;">
           <video id="breakdown-video" muted loop playsinline preload="none"></video>
           <div class="player-controls">
@@ -88,11 +93,11 @@
 
     <aside>
       <div class="sidebar-block">
-        <span class="sidebar-label">Credits</span>
+        <span class="sidebar-label" data-i18n="proj_credits">Credits</span>
         <ul class="credit-list" id="p-credits"></ul>
       </div>
       <div class="sidebar-block">
-        <span class="sidebar-label">Tools</span>
+        <span class="sidebar-label" data-i18n="proj_tools">Tools</span>
         <div class="tool-tags" id="p-tools"></div>
       </div>
     </aside>
@@ -101,7 +106,7 @@
   <section class="container next-project">
     <a class="next-project-link" id="next-project-link" href="work.html" data-cursor-hover>
       <div>
-        <span class="eyebrow-mono">Next project</span>
+        <span class="eyebrow-mono" data-i18n="proj_next">Next project</span>
         <h3 class="display-lg" id="next-project-title" style="margin-top:8px;">—</h3>
       </div>
       <span class="tc" style="font-size:2rem;">→</span>
@@ -110,20 +115,21 @@
 </main>
 
 <footer class="site-footer">
-  <span>© <span id="year"></span> Darhan Sartai. Built to move.</span>
+  <span>© <span id="year"></span> <span data-i18n="brand_name">Darhan Sartai</span>. <span data-i18n="footer_tagline">Built to move.</span></span>
   <div class="footer-links">
-    <a href="mailto:hello@Darhanreyes.work">Email</a>
-    <a href="https://linkedin.com" target="_blank" rel="noopener">LinkedIn</a>
-    <a href="https://vimeo.com" target="_blank" rel="noopener">Vimeo</a>
+    <a href="mailto:hello@Darhanreyes.work" data-i18n="footer_email">Email</a>
+    <a href="https://linkedin.com" target="_blank" rel="noopener" data-i18n="footer_linkedin">LinkedIn</a>
+    <a href="https://vimeo.com" target="_blank" rel="noopener" data-i18n="footer_vimeo">Vimeo</a>
   </div>
 </footer>
 
 <div class="cinema-overlay" aria-hidden="true">
-  <button class="cinema-close" data-cinema-close aria-label="Close cinema mode">✕</button>
+  <button class="cinema-close" data-cinema-close aria-label="Close cinema mode" data-i18n-aria="cinema_close_aria">✕</button>
   <video controls playsinline></video>
 </div>
 
 <script src="js/data.js"></script>
+<script src="js/i18n.js"></script>
 <script src="js/project.js"></script>
 <script src="js/main.js"></script>
 </body>

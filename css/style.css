@@ -192,6 +192,27 @@ p { color: var(--text-dim); max-width: 62ch; }
 }
 .main-nav .nav-cta:hover { border-color: var(--accent); background: rgba(232,64,42,0.08); }
 
+/* Language switcher — three small pill buttons in the nav */
+.lang-switch {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  border: 1px solid var(--line);
+  border-radius: 100px;
+  padding: 3px;
+}
+.lang-switch button {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.02em;
+  color: var(--text-faint);
+  padding: 5px 10px;
+  border-radius: 100px;
+  transition: color 0.2s var(--ease), background 0.2s var(--ease);
+}
+.lang-switch button:hover { color: var(--text); }
+.lang-switch button.is-active { background: var(--text); color: var(--bg); }
+
 .nav-toggle {
   display: none;
   width: 32px; height: 24px;
@@ -223,6 +244,8 @@ p { color: var(--text-dim); max-width: 62ch; }
   .nav-open .main-nav { transform: translateX(0); }
   .main-nav a { font-size: 1.6rem; font-family: var(--font-display); color: var(--text); }
   .nav-toggle { display: block; z-index: 101; }
+  .lang-switch { order: 10; }
+  .lang-switch button { font-size: 0.9rem; padding: 8px 14px; }
 }
 
 /* =========================================================

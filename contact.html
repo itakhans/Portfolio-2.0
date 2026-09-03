@@ -13,74 +13,80 @@
 <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-<a class="skip-link" href="#main">Skip to content</a>
+<a class="skip-link" href="#main" data-i18n="skip_link">Skip to content</a>
 
 <header class="site-header">
-  <a href="index.html" class="brand"><span class="rec-dot" aria-hidden="true"></span>Darhan Sartai</a>
-  <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+  <a href="index.html" class="brand"><span class="rec-dot" aria-hidden="true"></span><span data-i18n="brand_name">Darhan Sartai</span></a>
+  <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" data-i18n-aria="nav_toggle_aria">
     <span></span><span></span><span></span>
   </button>
   <nav class="main-nav" aria-label="Primary">
-    <a href="index.html">Home</a>
-    <a href="work.html">Work</a>
-    <a href="about.html">About</a>
-    <a href="contact.html" class="nav-cta is-active">Contact</a>
+    <a href="index.html" data-i18n="nav_home">Home</a>
+    <a href="work.html" data-i18n="nav_work">Work</a>
+    <a href="about.html" data-i18n="nav_about">About</a>
+    <a href="contact.html" class="nav-cta is-active" data-i18n="nav_contact">Contact</a>
+    <div class="lang-switch" role="group" data-i18n-aria="lang_switch_aria" aria-label="Language">
+      <button type="button" data-lang="en">EN</button>
+      <button type="button" data-lang="kk">KK</button>
+      <button type="button" data-lang="ru">RU</button>
+    </div>
   </nav>
 </header>
 
 <main id="main">
   <section class="section container">
-    <span class="eyebrow-mono reveal">Get in touch</span>
-    <h1 class="display-lg reveal" style="margin-top:12px; max-width:16ch;">Let's make something move.</h1>
+    <span class="eyebrow-mono reveal" data-i18n="contact_eyebrow">Get in touch</span>
+    <h1 class="display-lg reveal" style="margin-top:12px; max-width:16ch;" data-i18n="contact_title">Let's make something move.</h1>
 
     <div class="contact-grid mt-lg">
       <div class="reveal">
         <form id="contact-form" novalidate>
           <div class="field" id="field-name">
-            <label for="name">Name</label>
+            <label for="name" data-i18n="contact_name">Name</label>
             <input type="text" id="name" name="name" autocomplete="name" required />
-            <span class="field-error">Please enter your name.</span>
+            <span class="field-error" data-i18n="contact_name_error">Please enter your name.</span>
           </div>
           <div class="field" id="field-email">
-            <label for="email">Email</label>
+            <label for="email" data-i18n="contact_email">Email</label>
             <input type="email" id="email" name="email" autocomplete="email" required />
-            <span class="field-error">Please enter a valid email address.</span>
+            <span class="field-error" data-i18n="contact_email_error">Please enter a valid email address.</span>
           </div>
           <div class="field" id="field-message">
-            <label for="message">Message</label>
+            <label for="message" data-i18n="contact_message">Message</label>
             <textarea id="message" name="message" rows="5" required></textarea>
-            <span class="field-error">Tell me a little about the project.</span>
+            <span class="field-error" data-i18n="contact_message_error">Tell me a little about the project.</span>
           </div>
-          <button type="submit" class="btn btn-primary" data-cursor-hover>Send message</button>
+          <button type="submit" class="btn btn-primary" data-cursor-hover data-i18n="contact_send">Send message</button>
           <p class="form-status" id="form-status" role="status"></p>
         </form>
       </div>
 
       <div class="reveal">
-        <span class="sidebar-label">Elsewhere</span>
+        <span class="sidebar-label" data-i18n="contact_elsewhere">Elsewhere</span>
         <ul class="social-list">
-          <li><a href="mailto:hello@Darhanreyes.work" data-cursor-hover>Email<span class="arrow">hello@Darhanreyes.work</span></a></li>
+          <li><a href="mailto:hello@Darhanreyes.work" data-cursor-hover><span data-i18n="footer_email">Email</span><span class="arrow">hello@Darhanreyes.work</span></a></li>
           <li><a href="https://linkedin.com" target="_blank" rel="noopener" data-cursor-hover>LinkedIn<span class="arrow">↗</span></a></li>
           <li><a href="https://instagram.com" target="_blank" rel="noopener" data-cursor-hover>Instagram<span class="arrow">↗</span></a></li>
           <li><a href="https://vimeo.com" target="_blank" rel="noopener" data-cursor-hover>Vimeo<span class="arrow">↗</span></a></li>
           <li><a href="https://behance.net" target="_blank" rel="noopener" data-cursor-hover>Behance<span class="arrow">↗</span></a></li>
-          <li><a href="assets/Darhan-reyes-resume.pdf" data-cursor-hover>Résumé (PDF)<span class="arrow">↓</span></a></li>
+          <li><a href="assets/Darhan-reyes-resume.pdf" data-cursor-hover><span data-i18n="contact_resume_link">Résumé (PDF)</span><span class="arrow">↓</span></a></li>
         </ul>
-        <p style="margin-top:32px; font-size:0.9rem;">Based in Los Angeles, CA — working with clients everywhere. Typical reply time is 1–2 business days.</p>
+        <p style="margin-top:32px; font-size:0.9rem;" data-i18n="contact_location_note">Based in Los Angeles, CA — working with clients everywhere. Typical reply time is 1–2 business days.</p>
       </div>
     </div>
   </section>
 </main>
 
 <footer class="site-footer">
-  <span>© <span id="year"></span> Darhan Sartai. Built to move.</span>
+  <span>© <span id="year"></span> <span data-i18n="brand_name">Darhan Sartai</span>. <span data-i18n="footer_tagline">Built to move.</span></span>
   <div class="footer-links">
-    <a href="mailto:hello@Darhanreyes.work">Email</a>
-    <a href="https://linkedin.com" target="_blank" rel="noopener">LinkedIn</a>
-    <a href="https://vimeo.com" target="_blank" rel="noopener">Vimeo</a>
+    <a href="mailto:hello@Darhanreyes.work" data-i18n="footer_email">Email</a>
+    <a href="https://linkedin.com" target="_blank" rel="noopener" data-i18n="footer_linkedin">LinkedIn</a>
+    <a href="https://vimeo.com" target="_blank" rel="noopener" data-i18n="footer_vimeo">Vimeo</a>
   </div>
 </footer>
 
+<script src="js/i18n.js"></script>
 <script>
   document.getElementById("year").textContent = new Date().getFullYear();
 
@@ -121,14 +127,14 @@
     e.preventDefault();
     const data = validate();
     if (!data) {
-      status.textContent = "Please fix the highlighted fields.";
+      status.textContent = t("contact_status_fix");
       status.className = "form-status is-visible is-error";
       return;
     }
 
     if (FORM_ENDPOINT) {
       try {
-        status.textContent = "Sending…";
+        status.textContent = t("contact_status_sending");
         status.className = "form-status is-visible";
         const res = await fetch(FORM_ENDPOINT, {
           method: "POST",
@@ -136,11 +142,11 @@
           body: JSON.stringify(data),
         });
         if (!res.ok) throw new Error("Request failed");
-        status.textContent = "Thanks — message sent. I'll reply within a couple of days.";
+        status.textContent = t("contact_status_success");
         status.className = "form-status is-visible is-success";
         form.reset();
       } catch (err) {
-        status.textContent = "Something went wrong sending that — try the mailto link below instead.";
+        status.textContent = t("contact_status_error");
         status.className = "form-status is-visible is-error";
       }
     } else {
@@ -148,7 +154,7 @@
       const subject = encodeURIComponent(`Project inquiry from ${data.name}`);
       const body = encodeURIComponent(`${data.message}\n\n— ${data.name} (${data.email})`);
       window.location.href = `mailto:${DEST_EMAIL}?subject=${subject}&body=${body}`;
-      status.textContent = "Opening your email client to finish sending…";
+      status.textContent = t("contact_status_mailto");
       status.className = "form-status is-visible is-success";
     }
   });

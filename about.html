@@ -13,18 +13,23 @@
 <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-<a class="skip-link" href="#main">Skip to content</a>
+<a class="skip-link" href="#main" data-i18n="skip_link">Skip to content</a>
 
 <header class="site-header">
-  <a href="index.html" class="brand"><span class="rec-dot" aria-hidden="true"></span>Darhan Sartai</a>
-  <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+  <a href="index.html" class="brand"><span class="rec-dot" aria-hidden="true"></span><span data-i18n="brand_name">Darhan Sartai</span></a>
+  <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" data-i18n-aria="nav_toggle_aria">
     <span></span><span></span><span></span>
   </button>
   <nav class="main-nav" aria-label="Primary">
-    <a href="index.html">Home</a>
-    <a href="work.html">Work</a>
-    <a href="about.html" class="is-active">About</a>
-    <a href="contact.html" class="nav-cta">Contact</a>
+    <a href="index.html" data-i18n="nav_home">Home</a>
+    <a href="work.html" data-i18n="nav_work">Work</a>
+    <a href="about.html" class="is-active" data-i18n="nav_about">About</a>
+    <a href="contact.html" class="nav-cta" data-i18n="nav_contact">Contact</a>
+    <div class="lang-switch" role="group" data-i18n-aria="lang_switch_aria" aria-label="Language">
+      <button type="button" data-lang="en">EN</button>
+      <button type="button" data-lang="kk">KK</button>
+      <button type="button" data-lang="ru">RU</button>
+    </div>
   </nav>
 </header>
 
@@ -37,10 +42,10 @@
       </div>
 
       <div>
-        <span class="eyebrow-mono reveal">About</span>
-        <h1 class="display-lg reveal" style="margin-top:12px;">Hi, I'm Darhan.<br />I make things move for a living.</h1>
+        <span class="eyebrow-mono reveal" data-i18n="about_eyebrow">About</span>
+        <h1 class="display-lg reveal" style="margin-top:12px;" data-i18n-html="about_headline_html">Hi, I'm Darhan.<br />I make things move for a living.</h1>
 
-        <p class="lede reveal" style="margin-top:24px; max-width:58ch;">
+        <p class="lede reveal" style="margin-top:24px; max-width:58ch;" data-i18n="about_p1">
           I'm a motion designer and animator based in Los Angeles, working
           across 2D animation, CGI, brand identity, UI motion, and VFX.
           Over the past eight years I've split my time between agency work
@@ -48,19 +53,19 @@
           a concept from a blank page and slotting into an existing design
           system on day one.
         </p>
-        <p class="reveal" style="margin-top:16px; max-width:58ch;">
+        <p class="reveal" style="margin-top:16px; max-width:58ch;" data-i18n="about_p2">
           I trained originally as an editorial illustrator, which still
           shows up in how I think about pacing and composition — every
           project starts as a storyboard before it becomes a timeline.
           I care most about work that respects the viewer's attention:
           nothing moves without a reason.
         </p>
-        <a href="assets/Darhan-reyes-resume.pdf" class="btn btn-outline reveal" style="margin-top:24px;" data-cursor-hover>
+        <a href="assets/Darhan-reyes-resume.pdf" class="btn btn-outline reveal" style="margin-top:24px;" data-cursor-hover data-i18n="about_resume">
           Download résumé (PDF)
         </a>
 
         <div class="reveal" style="margin-top:64px;">
-          <span class="eyebrow-mono">Software</span>
+          <span class="eyebrow-mono" data-i18n="about_software">Software</span>
           <div class="skills-grid">
             <div class="skill-item"><span>After Effects</span></div>
             <div class="skill-item"><span>Cinema 4D</span></div>
@@ -74,34 +79,34 @@
         </div>
 
         <div class="reveal" style="margin-top:56px;">
-          <span class="eyebrow-mono">Career</span>
+          <span class="eyebrow-mono" data-i18n="about_career">Career</span>
           <div class="timeline">
             <div class="timeline-item">
               <span class="timeline-year tc">2023—</span>
               <div>
-                <div class="timeline-role">Senior Motion Designer</div>
-                <div class="timeline-org">Freelance / Independent</div>
+                <div class="timeline-role" data-i18n="timeline_role_1">Senior Motion Designer</div>
+                <div class="timeline-org" data-i18n="timeline_org_1">Freelance / Independent</div>
               </div>
             </div>
             <div class="timeline-item">
               <span class="timeline-year tc">2020—23</span>
               <div>
-                <div class="timeline-role">Motion Designer</div>
-                <div class="timeline-org">Northline Pictures</div>
+                <div class="timeline-role" data-i18n="timeline_role_2">Motion Designer</div>
+                <div class="timeline-org" data-i18n="timeline_org_2">Northline Pictures</div>
               </div>
             </div>
             <div class="timeline-item">
               <span class="timeline-year tc">2018—20</span>
               <div>
-                <div class="timeline-role">Junior Animator</div>
-                <div class="timeline-org">Firebrand Studios</div>
+                <div class="timeline-role" data-i18n="timeline_role_3">Junior Animator</div>
+                <div class="timeline-org" data-i18n="timeline_org_3">Firebrand Studios</div>
               </div>
             </div>
             <div class="timeline-item">
               <span class="timeline-year tc">2016—18</span>
               <div>
-                <div class="timeline-role">Editorial Illustrator</div>
-                <div class="timeline-org">Freelance</div>
+                <div class="timeline-role" data-i18n="timeline_role_4">Editorial Illustrator</div>
+                <div class="timeline-org" data-i18n="timeline_org_4">Freelance</div>
               </div>
             </div>
           </div>
@@ -112,14 +117,15 @@
 </main>
 
 <footer class="site-footer">
-  <span>© <span id="year"></span> Darhan Sartai. Built to move.</span>
+  <span>© <span id="year"></span> <span data-i18n="brand_name">Darhan Sartai</span>. <span data-i18n="footer_tagline">Built to move.</span></span>
   <div class="footer-links">
-    <a href="mailto:hello@Darhanreyes.work">Email</a>
-    <a href="https://linkedin.com" target="_blank" rel="noopener">LinkedIn</a>
-    <a href="https://vimeo.com" target="_blank" rel="noopener">Vimeo</a>
+    <a href="mailto:hello@Darhanreyes.work" data-i18n="footer_email">Email</a>
+    <a href="https://linkedin.com" target="_blank" rel="noopener" data-i18n="footer_linkedin">LinkedIn</a>
+    <a href="https://vimeo.com" target="_blank" rel="noopener" data-i18n="footer_vimeo">Vimeo</a>
   </div>
 </footer>
 
+<script src="js/i18n.js"></script>
 <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
 <script src="js/main.js"></script>
 </body>

@@ -72,9 +72,17 @@
       requestAnimationFrame(loop);
     })();
 
-    document.querySelectorAll("[data-cursor-hover]").forEach((el) => {
-      el.addEventListener("mouseenter", () => dot.classList.add("is-hover"));
-      el.addEventListener("mouseleave", () => dot.classList.remove("is-hover"));
+    // Event delegation, not per-element binding: the featured grid,
+    // work grid, and filter chips all re-render dynamically (on filter
+    // clicks and language switches), so binding to elements present at
+    // load time would silently stop working after the first re-render.
+    document.addEventListener("mouseover", (e) => {
+      if (e.target.closest("[data-cursor-hover]")) dot.classList.add("is-hover");
+    });
+    document.addEventListener("mouseout", (e) => {
+      const from = e.target.closest("[data-cursor-hover]");
+      const to = e.relatedTarget && e.relatedTarget.closest && e.relatedTarget.closest("[data-cursor-hover]");
+      if (from && from !== to) dot.classList.remove("is-hover");
     });
   }
 
@@ -110,6 +118,9 @@
   const ICON_PAUSE = '<svg viewBox="0 0 24 24"><rect x="5" y="4" width="5" height="16"/><rect x="14" y="4" width="5" height="16"/></svg>';
   const ICON_MUTED = '<svg viewBox="0 0 24 24"><path d="M4 9v6h4l5 5V4L8 9H4zm12.5 3l3-3-1-1-3 3-3-3-1 1 3 3-3 3 1 1 3-3 3 3 1-1-3-3z"/></svg>';
   const ICON_UNMUTED = '<svg viewBox="0 0 24 24"><path d="M4 9v6h4l5 5V4L8 9H4zm11.5 3a4.5 4.5 0 0 0-2.5-4v8a4.5 4.5 0 0 0 2.5-4zM13 1.5v2.06c3.4.9 6 3.98 6 7.44s-2.6 6.55-6 7.44v2.06c4.5-.93 8-4.92 8-9.5s-3.5-8.57-8-9.5z"/></svg>';
+  const trT = (key, fallback) => (typeof t === "function" ? t(key) : fallback);
+
+  const playerRefreshers = [];
 
   document.querySelectorAll("[data-player]").forEach((wrap) => {
     const video = wrap.querySelector("video");
@@ -130,7 +141,10 @@
     const updatePlayIcon = () => {
       if (!playBtn) return;
       playBtn.innerHTML = video.paused ? ICON_PLAY : ICON_PAUSE;
-      playBtn.setAttribute("aria-label", video.paused ? "Play" : "Pause");
+      playBtn.setAttribute(
+        "aria-label",
+        video.paused ? trT("player_play_aria", "Play") : trT("player_pause_aria", "Pause")
+      );
     };
 
     if (playBtn) {
@@ -145,13 +159,24 @@
     if (muteBtn) {
       const updateMuteIcon = () => {
         muteBtn.innerHTML = video.muted ? ICON_MUTED : ICON_UNMUTED;
-        muteBtn.setAttribute("aria-label", video.muted ? "Unmute" : "Mute");
+        muteBtn.setAttribute(
+          "aria-label",
+          video.muted ? trT("player_unmute_aria", "Unmute") : trT("player_mute_aria", "Mute")
+        );
       };
       muteBtn.addEventListener("click", () => {
         video.muted = !video.muted;
         updateMuteIcon();
       });
       updateMuteIcon();
+      playerRefreshers.push(updateMuteIcon);
+    }
+
+    if (playBtn) playerRefreshers.push(updatePlayIcon);
+
+    if (scrub) {
+      scrub.setAttribute("aria-label", trT("proj_seek_aria", "Seek"));
+      playerRefreshers.push(() => scrub.setAttribute("aria-label", trT("proj_seek_aria", "Seek")));
     }
 
     if (scrub && scrubFill) {
@@ -167,6 +192,10 @@
       });
     }
   });
+
+  if (playerRefreshers.length) {
+    window.addEventListener("langchange", () => playerRefreshers.forEach((fn) => fn()));
+  }
 
   /* ---------- Cinema mode ---------- */
   document.querySelectorAll("[data-cinema-open]").forEach((btn) => {
@@ -204,11 +233,20 @@
   const soundToggle = document.querySelector("[data-sound-toggle]");
   if (soundToggle) {
     const heroVideo = document.querySelector(".hero-media");
+    const trans = (key, fallback) =>
+      typeof t === "function" ? t(key) : fallback;
+    const renderSoundLabel = () => {
+      if (!heroVideo) return;
+      soundToggle.textContent = heroVideo.muted
+        ? trans("hero_sound_off", "▸ SOUND OFF")
+        : trans("hero_sound_on", "▸ SOUND ON");
+    };
     soundToggle.addEventListener("click", () => {
       if (!heroVideo) return;
       heroVideo.muted = !heroVideo.muted;
-      soundToggle.textContent = heroVideo.muted ? "▸ SOUND OFF" : "▸ SOUND ON";
+      renderSoundLabel();
       soundToggle.setAttribute("aria-pressed", String(!heroVideo.muted));
     });
+    window.addEventListener("langchange", renderSoundLabel);
   }
 })();

@@ -14,6 +14,7 @@ about.html      Bio, headshot, software list, career timeline
 contact.html    Validated contact form + social links
 css/style.css   All styling (design tokens at the top of the file)
 js/data.js      ← ALL PROJECT CONTENT LIVES HERE
+js/i18n.js      Language switcher + English/Kazakh/Russian translations
 js/main.js      Shared behavior: nav, cursor, reveals, video player, cinema mode
 js/project.js   Renders project.html from data.js
 ```
@@ -51,6 +52,45 @@ video bandwidth yourself), swap the `<video id="main-video">` block in
 `project.html` for an `<iframe>` using their embed URL, keyed off
 `project.video.src` in `js/project.js`. Both platforms' privacy-enhanced
 embed URLs work well here.
+
+## Language switcher (English / Kazakh / Russian)
+
+The nav includes an EN · KK · RU switcher on every page. It works entirely
+client-side — no page reload, no separate URLs per language — and remembers
+the visitor's choice for next time.
+
+**How it's organized:**
+- Site chrome (nav, headings, buttons, form labels, footer, the About page
+  bio) is translated in `js/i18n.js`, in the `UI` dictionary. Every
+  translatable element in the HTML is tagged `data-i18n="key"` (or
+  `data-i18n-html` / `data-i18n-aria` for innerHTML / aria-label).
+- Project content (title, blurb, description, role, credit roles) comes
+  from `js/data.js` in English by default. Kazakh/Russian overrides for
+  each sample project live in `PROJECT_I18N` in `js/i18n.js`, keyed by
+  the project's `slug`. **Anything you don't add a translation for just
+  falls back to the English text automatically** — you don't have to
+  translate everything at once, or ever, if you don't want to.
+
+**Adding translations for a new project:** after adding the project to
+`js/data.js` as usual, add an entry to `PROJECT_I18N` in `js/i18n.js`:
+```js
+"your-project-slug": {
+  ru: { role: "...", blurb: "...", description: "...", credits: ["...", "..."] },
+  kk: { role: "...", blurb: "...", description: "...", credits: ["...", "..."] },
+},
+```
+`credits` is an array of translated **role** strings only (not names),
+in the same order as that project's `credits` array in `data.js` —
+people's and studios' names aren't translated.
+
+**Category filter labels** (2D Animation, VFX, etc.) are translated in
+`CATEGORY_I18N` in the same file, keyed by category id.
+
+**A note on translation quality:** the Kazakh and Russian text shipped
+here is a solid first pass — natural, professional register, not
+machine-translated filler — but if you (or someone you trust) reads
+either language natively, it's worth a quick pass before this goes live.
+Register and idiom are always worth a human check.
 
 ## Placeholder content
 
@@ -95,6 +135,8 @@ instead of opening the visitor's email client:
 - SEO meta tags + Open Graph tags per page (project pages generate their
   own OG title/description from `data.js`)
 - Contact form with inline validation and a no-backend-required fallback
+- English / Kazakh / Russian language switcher, persisted across visits
+  (see "Language switcher" above)
 
 ## Before you launch
 

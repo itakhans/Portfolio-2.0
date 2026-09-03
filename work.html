@@ -14,45 +14,51 @@
 <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-<a class="skip-link" href="#main">Skip to content</a>
+<a class="skip-link" href="#main" data-i18n="skip_link">Skip to content</a>
 
 <header class="site-header">
-  <a href="index.html" class="brand"><span class="rec-dot" aria-hidden="true"></span>Darhan Sartai</a>
-  <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+  <a href="index.html" class="brand"><span class="rec-dot" aria-hidden="true"></span><span data-i18n="brand_name">Darhan Sartai</span></a>
+  <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" data-i18n-aria="nav_toggle_aria">
     <span></span><span></span><span></span>
   </button>
   <nav class="main-nav" aria-label="Primary">
-    <a href="index.html">Home</a>
-    <a href="work.html" class="is-active">Work</a>
-    <a href="about.html">About</a>
-    <a href="contact.html" class="nav-cta">Contact</a>
+    <a href="index.html" data-i18n="nav_home">Home</a>
+    <a href="work.html" class="is-active" data-i18n="nav_work">Work</a>
+    <a href="about.html" data-i18n="nav_about">About</a>
+    <a href="contact.html" class="nav-cta" data-i18n="nav_contact">Contact</a>
+    <div class="lang-switch" role="group" data-i18n-aria="lang_switch_aria" aria-label="Language">
+      <button type="button" data-lang="en">EN</button>
+      <button type="button" data-lang="kk">KK</button>
+      <button type="button" data-lang="ru">RU</button>
+    </div>
   </nav>
 </header>
 
 <main id="main">
   <section class="section container" style="padding-bottom:0;">
-    <span class="eyebrow-mono">Archive</span>
-    <h1 class="display-lg" style="margin-top:12px;">All work</h1>
+    <span class="eyebrow-mono" data-i18n="work_eyebrow">Archive</span>
+    <h1 class="display-lg" style="margin-top:12px;" data-i18n="work_title">All work</h1>
   </section>
 
   <section class="section container">
-    <div class="filter-bar" id="filter-bar" role="group" aria-label="Filter by category"></div>
+    <div class="filter-bar" id="filter-bar" role="group" aria-label="Filter by category" data-i18n-aria="work_aria_filter"></div>
     <p class="results-count" id="results-count" aria-live="polite"></p>
     <div class="grid" id="work-grid"></div>
-    <p id="empty-state" style="display:none; margin-top:24px;">No projects match this filter yet — check back soon, or <a href="contact.html" style="text-decoration:underline;">get in touch</a> about a brief like this.</p>
+    <p id="empty-state" style="display:none; margin-top:24px;" data-i18n-html="work_empty_html">No projects match this filter yet — check back soon, or <a href="contact.html" style="text-decoration:underline;">get in touch</a> about a brief like this.</p>
   </section>
 </main>
 
 <footer class="site-footer">
-  <span>© <span id="year"></span> Darhan Sartai. Built to move.</span>
+  <span>© <span id="year"></span> <span data-i18n="brand_name">Darhan Sartai</span>. <span data-i18n="footer_tagline">Built to move.</span></span>
   <div class="footer-links">
-    <a href="mailto:hello@Darhanreyes.work">Email</a>
-    <a href="https://linkedin.com" target="_blank" rel="noopener">LinkedIn</a>
-    <a href="https://vimeo.com" target="_blank" rel="noopener">Vimeo</a>
+    <a href="mailto:hello@Darhanreyes.work" data-i18n="footer_email">Email</a>
+    <a href="https://linkedin.com" target="_blank" rel="noopener" data-i18n="footer_linkedin">LinkedIn</a>
+    <a href="https://vimeo.com" target="_blank" rel="noopener" data-i18n="footer_vimeo">Vimeo</a>
   </div>
 </footer>
 
 <script src="js/data.js"></script>
+<script src="js/i18n.js"></script>
 <script>
   document.getElementById("year").textContent = new Date().getFullYear();
 
@@ -67,7 +73,10 @@
   const emptyEl = document.getElementById("empty-state");
 
   function renderFilters() {
-    const chips = [{ id: "all", label: "All work" }, ...CATEGORIES];
+    const lang = getLang();
+    const chips = [{ id: "all", label: t("work_filter_all", lang) }].concat(
+      CATEGORIES.map((c) => ({ id: c.id, label: categoryLabel(c.id, lang) }))
+    );
     filterBar.innerHTML = chips
       .map(
         (c) =>
@@ -87,18 +96,17 @@
   }
 
   function renderGrid() {
+    const lang = getLang();
     const filtered = PROJECTS.filter(
       (p) => activeFilter === "all" || p.categories.includes(activeFilter)
     ).sort((a, b) => b.year - a.year);
 
-    countEl.textContent = `${filtered.length} project${filtered.length === 1 ? "" : "s"}`;
+    countEl.textContent = formatWorkCount(filtered.length, lang);
     emptyEl.style.display = filtered.length ? "none" : "block";
 
     gridEl.innerHTML = filtered
       .map((p) => {
-        const catLabels = p.categories
-          .map((c) => (CATEGORIES.find((x) => x.id === c) || {}).label || c)
-          .join(" · ");
+        const catLabels = p.categories.map((c) => categoryLabel(c, lang)).join(" · ");
         return `
         <article class="card reveal is-visible">
           <a class="card-link" href="project.html?p=${p.slug}" data-cursor-hover>
@@ -120,8 +128,13 @@
       .join("");
   }
 
-  renderFilters();
-  renderGrid();
+  function renderAll() {
+    renderFilters();
+    renderGrid();
+  }
+
+  renderAll();
+  window.addEventListener("langchange", renderAll);
 </script>
 <script src="js/main.js"></script>
 </body>
