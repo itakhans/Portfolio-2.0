@@ -26,8 +26,8 @@
 const CATEGORIES = [
   { id: "2d", label: "2D Animation" },
   { id: "3d", label: "3D / CGI" },
-  { id: "brand", label: "Brand Identity" },
-  { id: "ui", label: "UI Motion" },
+  //{ id: "brand", label: "Brand Identity" },
+  //{ id: "ui", label: "UI Motion" },
   { id: "vfx", label: "VFX" },
   { id: "titles", label: "Title Sequences" },
 ];
@@ -35,19 +35,19 @@ const CATEGORIES = [
 const PROJECTS = [
   {
     slug: "aperture-rebrand",
-    title: "Aperture",
-    client: "Aperture Audio",
-    year: 2025,
-    categories: ["brand", "2d"],
-    role: "Lead Motion Designer",
-    tools: ["After Effects", "Illustrator", "Cinema 4D"],
-    blurb: "A kinetic identity system for a headphone brand's product launch.",
+    title: "Rubik's Cube",
+    client: "PTRK, Kazinform, Jibek Joly",
+    year: 2024,
+    categories: ["3d"],
+    role: "Motion Designer",
+    tools: ["Blender", "After Effects"],
+    blurb: "A dynamic screen filler designed for PTRK’s Instagram Stories, adding visual continuity and motion between published content.",
     description:
-      "Aperture needed a motion identity that could stretch from a 6-second bumper to a 90-second launch film without losing its shape. I built a modular system of shape language and sound-reactive typography, then documented it as a living style guide so their internal team could animate future drops without me.",
+      "The Television and Radio Complex of the President of the Republic of Kazakhstan commissioned a waiting screen for its social media platforms and online events. I created a seamless looping animation featuring a Rubik’s Cube, combining the visual identities of three of the organization’s media channels: PTRK, Kazinform, and Jibek Joly. The concept uses the cube as a visual metaphor for bringing distinct brands and media formats together into a single cohesive composition. of their media channels: PTRK, Kazinform and Jibek Joly",
     credits: [
       { role: "Motion Design", name: "You" },
-      { role: "Sound Design", name: "Echo Chamber Audio" },
-      { role: "Creative Direction", name: "Aperture In-house" },
+      { role: "Sound Design", name: "Royalty Free Audio" },
+      { role: "Creative Direction", name: "SMM managers of PTRK" },
     ],
     video: {
       type: "mp4",

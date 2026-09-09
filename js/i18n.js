@@ -41,7 +41,7 @@ const UI = {
     footer_tagline: "Built to move.",
     footer_email: "Email",
     footer_linkedin: "LinkedIn",
-    footer_vimeo: "Vimeo",
+    footer_vimeo: "Behance",
     cinema_close_aria: "Close cinema mode",
 
     // Home
@@ -98,20 +98,20 @@ const UI = {
     about_eyebrow: "About",
     about_headline_html: "Hi, I'm Darhan.<br />I make things move for a living.",
     about_p1:
-      "I'm a motion designer and animator based in Astana, working across 2D animation, CGI, brand identity, UI motion, and VFX. Over the past eight years I've split my time between agency work and in-house teams, which means I'm equally comfortable pitching a concept from a blank page and slotting into an existing design system on day one.",
+      "I'm a motion designer and animator based in Astana, working across 2D animation, CGI, brand identity, UI motion, and VFX. Over the past five years I've split my time between agency work and in-house teams, which means I'm equally comfortable pitching a concept from a blank page and slotting into an existing design system on day one.",
     about_p2:
-      "I trained originally as an editorial illustrator, which still shows up in how I think about pacing and composition — every project starts as a storyboard before it becomes a timeline. I care most about work that respects the viewer's attention: nothing moves without a reason.",
+      "My background in motion design and VFX shapes the way I approach every project — combining visual storytelling, composition, and technical craft from the very beginning. I like to work things out visually before they reach the timeline, whether through sketches, references, or storyboards. I care most about work that respects the viewer’s attention: every movement, transition, and detail should have a reason to be there.",
     about_resume: "Download résumé (PDF)",
     about_software: "Software",
     about_career: "Career",
-    timeline_role_1: "Senior Motion Designer",
-    timeline_org_1: "Freelance / Independent",
+    timeline_role_1: "TV Program Designer",
+    timeline_org_1: "Channel One Eurasia",
     timeline_role_2: "Motion Designer",
-    timeline_org_2: "Northline Pictures",
-    timeline_role_3: "Junior Animator",
-    timeline_org_3: "Firebrand Studios",
-    timeline_role_4: "Editorial Illustrator",
-    timeline_org_4: "Freelance",
+    timeline_org_2: "The Television and Radio Complex of the President of the Republic of Kazakhstan",
+    timeline_role_3: "Complex Graphics Designer",
+    timeline_org_3: "Channel One Eurasia",
+    timeline_role_4: "3D Motion Designer",
+    timeline_org_4: "IoT Pro LLP",
 
     // Contact
     contact_eyebrow: "Get in touch",
@@ -152,7 +152,7 @@ UI.ru.brand_name = "Дархан Сартай";
 UI.ru.footer_tagline = "Создано, чтобы двигаться.";
 UI.ru.footer_email = "Email";
 UI.ru.footer_linkedin = "LinkedIn";
-UI.ru.footer_vimeo = "Vimeo";
+UI.ru.footer_vimeo = "Behance";
 UI.ru.cinema_close_aria = "Закрыть кинорежим";
 UI.ru.hero_headline_html = "Движение,<br />которое<br />трогает людей.";
 UI.ru.hero_lede =
@@ -203,20 +203,20 @@ UI.ru.player_unmute_aria = "Включить звук";
 UI.ru.about_eyebrow = "Обо мне";
 UI.ru.about_headline_html = "Привет, я Дархан.<br />Заставляю вещи двигаться — это моя работа.";
 UI.ru.about_p1 =
-  "Я моушн-дизайнер и аниматор из Астаны, работаю с 2D-анимацией, CGI, айдентикой брендов, UI-анимацией и визуальными эффектами. За последние восемь лет я работал как в агентствах, так и в штате компаний, поэтому одинаково уверенно чувствую себя и при разработке концепции с нуля, и при встраивании в уже существующую дизайн-систему.";
+  "Я моушн-дизайнер и аниматор из Астаны, работаю с 2D-анимацией, CGI, айдентикой брендов, UI-анимацией и визуальными эффектами. За последние пять лет я работал как в агентствах, так и в штате компаний, поэтому одинаково уверенно чувствую себя и при разработке концепции с нуля, и при встраивании в уже существующую дизайн-систему.";
 UI.ru.about_p2 =
-  "Изначально я учился на редакционного иллюстратора, и это до сих пор влияет на то, как я мыслю темпом и композицией — каждый проект начинается со сториборда, прежде чем стать таймлайном. Больше всего для меня важна работа, которая уважает внимание зрителя: ничто не движется без причины.";
+  "В сфере моушн-дизайна и VFX визуальное повествование и техническое мастерство идут рука об руку. Я продумываю композицию и движение ещё до того, как проект попадает на таймлайн, используя референсы, эскизы и раскадровки, чтобы сформировать идею. Для меня важно создавать работу, которая уважает внимание зрителя: ничто не должно двигаться без причины.";
 UI.ru.about_resume = "Скачать резюме (PDF)";
 UI.ru.about_software = "Инструменты";
 UI.ru.about_career = "Карьера";
-UI.ru.timeline_role_1 = "Старший моушн-дизайнер";
-UI.ru.timeline_org_1 = "Фриланс / независимо";
+UI.ru.timeline_role_1 = "Дизайнер программ";
+UI.ru.timeline_org_1 = "Первый канал Евразия";
 UI.ru.timeline_role_2 = "Моушн-дизайнер";
-UI.ru.timeline_org_2 = "Northline Pictures";
-UI.ru.timeline_role_3 = "Младший аниматор";
-UI.ru.timeline_org_3 = "Firebrand Studios";
-UI.ru.timeline_role_4 = "Редакционный иллюстратор";
-UI.ru.timeline_org_4 = "Фриланс";
+UI.ru.timeline_org_2 = "Телерадиокомплекс Президента Республики Казахстан";
+UI.ru.timeline_role_3 = "Дизайнер сложной графики";
+UI.ru.timeline_org_3 = "Первый канал Евразия";
+UI.ru.timeline_role_4 = "3D Моушн-дизайнер";
+UI.ru.timeline_org_4 = "ТОО IoT Pro";
 
 UI.ru.contact_eyebrow = "Связаться";
 UI.ru.contact_title = "Давайте создадим что-то живое.";
@@ -251,7 +251,7 @@ UI.kk = {
   footer_tagline: "Қозғалу үшін жасалған.",
   footer_email: "Email",
   footer_linkedin: "LinkedIn",
-  footer_vimeo: "Vimeo",
+  footer_vimeo: "Behance",
   cinema_close_aria: "Кино режимін жабу",
 
   hero_headline_html: "Адамдарды<br />қозғалысқа<br />келтіретін моушн.",
@@ -303,20 +303,20 @@ UI.kk = {
   about_eyebrow: "Мен туралы",
   about_headline_html: "Сәлем, мен Дарханмын.<br />Заттарды қозғалысқа келтіру — менің кәсібім.",
   about_p1:
-    "Мен Астанада тұратын моушн-дизайнер және аниматормын, 2D анимация, CGI, брендтердің айдентикасы, UI қозғалысы және VFX бағыттарында жұмыс істеймін. Соңғы сегіз жылда агенттіктерде де, компания құрамында да жұмыс істедім, сондықтан концепцияны бастан жасауда да, дайын дизайн-жүйеге қосылуда да бірдей еркінмін.",
+    "Мен Астанада тұратын моушн-дизайнер және аниматормын, 2D анимация, CGI, брендтердің айдентикасы, UI қозғалысы және VFX бағыттарында жұмыс істеймін. Соңғы бес жылда агенттіктерде де, компания құрамында да жұмыс істедім, сондықтан концепцияны бастан жасауда да, дайын дизайн-жүйеге қосылуда да бірдей еркінмін.",
   about_p2:
-    "Бастапқыда редакциялық иллюстратор болып оқыдым, бұл әлі күнге дейін менің қарқын мен композицияны қалай ойлайтыныма әсер етеді — әрбір жоба таймлайнға айналмас бұрын раскадровкадан басталады. Мен үшін ең маңыздысы — көрермен назарын құрметтейтін жұмыс: ешнәрсе себепсіз қозғалмайды.",
+    "Моушн-дизайн және VFX саласында визуалды баяндау мен техникалық шеберлік қатар жүреді. Жобаны таймлайнға түсірмес бұрын композиция мен қозғалысты алдын ала ойластырып, идеяны қалыптастыру үшін референстерді, эскиздер мен раскадровкаларды қолданамын. Мен үшін көрерменнің назарын құрметтейтін жұмыс жасау маңызды: ешбір қозғалыс себепсіз болмауы керек.",
   about_resume: "Резюмені жүктеу (PDF)",
   about_software: "Құралдар",
   about_career: "Мансап",
-  timeline_role_1: "Аға моушн-дизайнер",
-  timeline_org_1: "Фриланс / тәуелсіз",
+  timeline_role_1: "Бағдарламалар дизайнері",
+  timeline_org_1: "Еуразия бірінші арнасы",
   timeline_role_2: "Моушн-дизайнер",
-  timeline_org_2: "Northline Pictures",
-  timeline_role_3: "Кіші аниматор",
-  timeline_org_3: "Firebrand Studios",
-  timeline_role_4: "Редакциялық иллюстратор",
-  timeline_org_4: "Фриланс",
+  timeline_org_2: "Қазақстан Республикасы Президентінің телерадиокешені",
+  timeline_role_3: "Күрделі графика дизайнері",
+  timeline_org_3: "Еуразия бірінші арнасы",
+  timeline_role_4: "3D Моушн-дизайнер",
+  timeline_org_4: "IoT Pro ЖШС",
 
   contact_eyebrow: "Байланысу",
   contact_title: "Бірге бір нәрсені қозғалысқа келтірейік.",
@@ -357,15 +357,15 @@ const CATEGORY_I18N = {
 const PROJECT_I18N = {
   "aperture-rebrand": {
     ru: {
-      role: "Ведущий моушн-дизайнер",
-      blurb: "Кинетическая система айдентики для запуска продукта бренда наушников.",
+      role: "Моушн-дизайнер",
+      blurb: "Динамическая заставка для Instagram Stories телеканала PTRK, предназначенная для визуального заполнения пространства между основным контентом.",
       description:
-        "Aperture нужна была моушн-айдентика, которая одинаково хорошо работала бы и в 6-секундном бампере, и в 90-секундном ролике запуска, не теряя формы. Я создал модульную систему языка форм и типографики, реагирующей на звук, а затем оформил её в виде живого гайдлайна, чтобы внутренняя команда могла анимировать будущие релизы самостоятельно.",
+        "Телерадиокомплекс Президента Республики Казахстан заказал заставку ожидания для своих социальных сетей и онлайн-мероприятий. Я создал зацикленную анимацию с изображением кубика Рубика, объединив визуальные стили трёх медиаканалов организации: PTRK, Kazinform и Jibek Joly. Куб выступает визуальной метафорой объединения различных брендов и медиаформатов в единую целостную композицию.",
       credits: ["Моушн-дизайн", "Саунд-дизайн", "Креативное руководство"],
     },
     kk: {
-      role: "Жетекші моушн-дизайнер",
-      blurb: "Құлаққап брендінің өнім шығарылымына арналған кинетикалық айдентика жүйесі.",
+      role: "Моушн-дизайнер",
+      blurb: "PTRK-ның Instagram Stories форматындағы контенті арасында қолдануға арналған динамикалық экрандық заставка.",
       description:
         "Aperture-ге 6 секундтық бампер мен 90 секундтық іске қосу фильмінде де пішінін жоғалтпайтын моушн-айдентика қажет болды. Мен пішін тілі мен дыбысқа үн қататын типографияның модульдік жүйесін жасап, оны тірі стиль нұсқаулығы ретінде рәсімдедім, осылайша олардың ішкі командасы келесі шығарылымдарды өз бетінше анимациялай алады.",
       credits: ["Моушн-дизайн", "Дыбыс дизайны", "Креативті басшылық"],
